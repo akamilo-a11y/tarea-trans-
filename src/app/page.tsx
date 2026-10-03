@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function HomePage() {
   return (
@@ -6,16 +7,45 @@ export default function HomePage() {
       {/* Newspaper Sheet Container */}
       <article className="page-container w-full max-w-5xl bg-[#fcfaf2] text-[#1a1a1a] shadow-2xl border border-[#d6ccb8] p-4 sm:p-8 md:p-12 relative flex flex-col justify-between">
         
+        {/* Marca de autor bien escondida en la esquina inferior */}
+        <span 
+          className="absolute bottom-1 right-2 text-[8px] text-[#cfc7b8] opacity-35 select-none pointer-events-none font-serif tracking-widest" 
+          aria-hidden="true"
+        >
+          Kamilo Avendaño
+        </span>
+
         {/* Inner Vintage Framing Border */}
         <div className="pointer-events-none absolute inset-2 sm:inset-3 border border-[#d4cbb8] opacity-60 hidden sm:block" />
 
-        {/* ===================== HEADER SECTION ===================== */}
+        {/* ===================== HEADER & TABS NAVIGATION ===================== */}
         <header className="relative z-10">
-          {/* Top Vintage Metadata Bar */}
+          
+          {/* Navegación de pestañas vintage */}
+          <nav className="flex flex-wrap items-center justify-between border-b-2 border-[#991b1b] pb-3 mb-4 text-xs font-title tracking-wider uppercase gap-2">
+            <div className="flex items-center gap-2">
+              <span className="bg-[#991b1b] text-[#fcfaf2] px-3.5 py-1.5 font-bold rounded-sm shadow-xs border border-[#7f1d1d] flex items-center gap-1.5">
+                📰 Periódico Histórico
+              </span>
+              <Link
+                href="/video-presentacion"
+                className="bg-[#f0e8d8] hover:bg-[#991b1b] hover:text-[#fcfaf2] text-[#1a1a1a] px-3.5 py-1.5 font-bold border border-[#d4cbb8] transition-colors rounded-sm shadow-xs flex items-center gap-1.5"
+              >
+                🎬 Video Presentación
+              </Link>
+            </div>
+            <span className="text-[0.7rem] sm:text-xs text-[#555] font-semibold">
+              Gaceta Histórica Digital
+            </span>
+          </nav>
+
+          {/* Top Vintage Metadata Bar: Autor de la página: Kevin Mejía */}
           <div className="flex flex-wrap items-center justify-between border-b border-[#1a1a1a] pb-2 text-[0.7rem] sm:text-xs tracking-widest uppercase font-title text-[#444] mb-3">
             <span>Año XIII • Edición Extraordinaria</span>
-            <span className="font-semibold text-[#1a1a1a]">Bogotá, República de Colombia</span>
-            <span>Precio: 5 Centavos</span>
+            <span className="font-bold text-[#1a1a1a] bg-[#f0e7d5] px-2 py-0.5 border border-[#d4cbb8]">
+              Autor de la página: Kevin Mejía
+            </span>
+            <span>Bogotá • Precio: 5 Centavos</span>
           </div>
 
           {/* Main Masthead / Title */}
@@ -25,6 +55,10 @@ export default function HomePage() {
             </h1>
             <p className="font-title italic text-base sm:text-xl md:text-2xl text-[#4a4a4a] mt-2 sm:mt-3 tracking-wide">
               Transformación política, económica y social.
+            </p>
+            {/* Crédito de redacción e investigación: Dana Valderrama */}
+            <p className="font-title text-xs sm:text-sm text-[#555] uppercase tracking-widest mt-2">
+              Texto e investigación histórica: <span className="font-bold text-[#1a1a1a]">Dana Valderrama</span>
             </p>
           </div>
 
@@ -36,7 +70,7 @@ export default function HomePage() {
 
           {/* Secondary Sub-bar */}
           <div className="flex items-center justify-between border-b border-[#1a1a1a] pb-2 text-[0.65rem] sm:text-xs font-title tracking-wider text-[#555] uppercase mb-6 sm:mb-8">
-            <span>Sección Histórica y Doctrinal</span>
+            <span>Redacción: Dana Valderrama</span>
             <span className="text-[#991b1b] font-bold">❖ Gaceta Oficial del Siglo XIX ❖</span>
             <span>Edición Conmemorativa</span>
           </div>
@@ -106,7 +140,7 @@ export default function HomePage() {
               </p>
             </div>
 
-            {/* Caricatura Ilustrada de Rafael Núñez (Grabado Histórico) */}
+            {/* Caricatura Ilustrada de Rafael Núñez (Autor: Andrés Villamizar) */}
             <figure className="my-2 p-3 sm:p-4 bg-[#f5efe3] border border-[#d4cbb8] shadow-sm flex flex-col items-center">
               <div className="relative w-full max-w-[280px] sm:max-w-[320px] aspect-square overflow-hidden border border-[#b8ab96] bg-[#fbf8f1] rounded-sm shadow-inner">
                 <Image
@@ -120,6 +154,9 @@ export default function HomePage() {
               </div>
               <figcaption className="mt-2.5 text-center font-title italic text-xs sm:text-sm text-[#4a4a4a] border-t border-[#d4cbb8] pt-2 w-full">
                 <span className="font-bold text-[#991b1b] not-italic tracking-wider">ILUSTRACIÓN DE ÉPOCA:</span> Rafael Núñez, la Constitución de 1886 y el pabellón nacional.
+                <div className="font-title not-italic text-xs text-[#555] mt-1">
+                  Caricatura por: <strong className="text-[#1a1a1a]">Andrés Villamizar</strong>
+                </div>
               </figcaption>
             </figure>
 
@@ -133,7 +170,7 @@ export default function HomePage() {
               </p>
             </div>
 
-            {/* BLOQUE DESTACADO: OPINIÓN */}
+            {/* BLOQUE DESTACADO: OPINIÓN (Autor: Kevin Mejía) */}
             <aside className="mt-4 p-5 sm:p-6 bg-[#f5efe3] border-2 border-[#991b1b] rounded relative shadow-sm">
               <div className="absolute -top-3 left-4 bg-[#991b1b] text-[#fcfaf2] px-3 py-0.5 text-xs font-title tracking-widest uppercase font-bold">
                 Tribuna Libre • Opinión
@@ -147,10 +184,10 @@ export default function HomePage() {
                 La Regeneración buscó unificar un país fragmentado, pero lo hizo a través de la exclusión y la represión. Me parece un período contradictorio: logró construir un Estado fuerte, pero dejó una herida social profunda que estalló en la Guerra de los Mil Días. La lección es que el orden sin justicia no es paz, es solo silencio.
               </p>
 
-              {/* Autor alineado a la derecha */}
+              {/* Autor alineado a la derecha: Kevin Mejía */}
               <div className="mt-4 pt-3 border-t border-[#d4cbb8] flex justify-end">
                 <p className="font-title italic font-bold text-base sm:text-lg text-[#1a1a1a]">
-                  Por: <span className="underline decoration-[#991b1b] decoration-2 underline-offset-4">[Tu Nombre Aquí]</span>
+                  Por: <span className="underline decoration-[#991b1b] decoration-2 underline-offset-4">Kevin Mejía</span>
                 </p>
               </div>
             </aside>
