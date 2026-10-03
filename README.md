@@ -131,13 +131,11 @@ Si prefieres desplegar directamente desde la terminal sin pasar por la interfaz 
 
 ---
 
-## ✍️ Personalización
+## 👥 Créditos del Proyecto
 
-Para cambiar el autor de la columna de opinión:
-1. Abre el archivo `src/app/page.tsx`.
-2. Busca la línea:
-   ```tsx
-   Por: <span className="underline decoration-[#991b1b] decoration-2 underline-offset-4">[Tu Nombre Aquí]</span>
-   ```
-3. Reemplaza `[Tu Nombre Aquí]` por tu nombre o firma.
-4. Guarda y haz commit para que se actualice en Vercel.
+- **Autor de la página:** Kevin Mejía
+- **Columna de Opinión:** Kevin Mejía
+- **Caricatura e Ilustración histórica:** Andrés Villamizar
+- **Redacción e investigación histórica:** Dana Valderrama
+- **Edición y coordinación general:** Kamilo Avendaño
+
