@@ -6,10 +6,10 @@ Una página web estática con estética de periódico de época del siglo XIX (e
 
 ## 🎨 Características del Diseño
 
-- **Estética Vintage / Periódico Histórico:** Paleta cromática en blanco roto (*off-white* de papel envejecido), tinta tipográfica negra y detalles en rojo carmesí histórico.
+- **Estética Vintage / Periódico Histórico:** Paleta cromática en blanco roto (_off-white_ de papel envejecido), tinta tipográfica negra y detalles en rojo carmesí histórico.
 - **Tipografía Serif Clásica:** Títulos en negrita e itálica con **Playfair Display** y cuerpo de lectura en **Lora** (mediante `@next/font/google`).
-- **Encabezado Clásico de Prensa:** Titular principal centrado, doble línea roja (una gruesa y otra delgada), y cintillo de metadatos de la época (*Año XIII, Bogotá, 5 Centavos*).
-- **Layout en Columnas:** Contenido maquetado en dos columnas con texto justificado, capitular ornamental (*drop-cap*), y cita destacada de Rafael Núñez.
+- **Encabezado Clásico de Prensa:** Titular principal centrado, doble línea roja (una gruesa y otra delgada), y cintillo de metadatos de la época (_Año XIII, Bogotá, 5 Centavos_).
+- **Layout en Columnas:** Contenido maquetado en dos columnas con texto justificado, capitular ornamental (_drop-cap_), y cita destacada de Rafael Núñez.
 - **Bloque Destacado de Opinión:** Módulo editorial enmarcado para la columna de opinión con autoría alineada a la derecha.
 - **Pie de Página Completo:** Fuentes consultadas dispuestas a todo el ancho.
 - **100% Responsive & Accesible:** En pantallas móviles las columnas se apilan verticalmente con perfecta legibilidad. Incluye estilos optimizados para impresión (`Ctrl + P`).
@@ -30,26 +30,32 @@ Una página web estática con estética de periódico de época del siglo XIX (e
 ## 🚀 Ejecución en Local
 
 ### 1. Clonar o descargar el repositorio
+
 ```bash
 git clone <URL_DE_TU_REPOSITORIO>
 cd chatgo
 ```
 
 ### 2. Instalar dependencias
+
 ```bash
 npm install
 ```
 
 ### 3. Iniciar el servidor de desarrollo
+
 ```bash
 npm run dev
 ```
+
 Abre tu navegador en [http://localhost:3000](http://localhost:3000) para ver la página en vivo.
 
 ### 4. Compilar para producción (Build)
+
 ```bash
 npm run build
 ```
+
 Este comando valida tipos en TypeScript, compila el código y genera la versión estática optimizada.
 
 ---
@@ -61,6 +67,7 @@ Existen dos métodos rápidos para desplegar este proyecto en Vercel:
 ### Opción A: Despliegue desde GitHub (Recomendado)
 
 1. **Sube tu proyecto a GitHub:**
+
    ```bash
    git add .
    git commit -m "feat: periodico historico La Regeneracion"
@@ -92,19 +99,23 @@ Existen dos métodos rápidos para desplegar este proyecto en Vercel:
 Si prefieres desplegar directamente desde la terminal sin pasar por la interfaz de GitHub:
 
 1. **Instala la CLI de Vercel de forma global:**
+
    ```bash
    npm install -g vercel
    ```
 
 2. **Inicia sesión en tu cuenta de Vercel:**
+
    ```bash
    vercel login
    ```
 
 3. **Ejecuta el despliegue preliminar (Preview):**
+
    ```bash
    vercel
    ```
+
    Responde las preguntas automáticas con `Enter` para aceptar los valores predeterminados de Next.js.
 
 4. **Despliega a Producción:**
@@ -138,4 +149,3 @@ Si prefieres desplegar directamente desde la terminal sin pasar por la interfaz 
 - **Caricatura e Ilustración histórica:** Andrés Villamizar
 - **Redacción e investigación histórica:** Dana Valderrama
 - **Edición y coordinación general:** Kamilo Avendaño
-
